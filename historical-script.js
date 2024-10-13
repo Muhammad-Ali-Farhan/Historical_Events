@@ -2,7 +2,7 @@ async function getHistory() {
     const dateInput = document.getElementById('dateInput').value;
     const historyDisplay = document.getElementById('historyDisplay');
     
-    // Clear previous content
+
     historyDisplay.innerHTML = '';
 
     if (!dateInput) {
@@ -25,7 +25,7 @@ async function getHistory() {
             return;
         }
 
-        // Add event data to the page dynamically
+
         let eventsHtml = `<h2>Events on ${month}-${day}</h2><ul>`;
         events.forEach(event => {
             const listItem = document.createElement('li');
@@ -34,7 +34,7 @@ async function getHistory() {
         });
         historyDisplay.innerHTML += '</ul>';
 
-        // Trigger page reflow to update scroll
+
         historyDisplay.scrollTop = historyDisplay.scrollHeight;
 
     } catch (error) {
